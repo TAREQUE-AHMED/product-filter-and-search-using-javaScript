@@ -76,33 +76,33 @@ let listProducts = [
     },
 
 ];
-// let productFilter = listProducts;
-// showProduct(productFilter);
-// function showProduct(productFilter){
-//     count.innerText = productFilter.length;
-//     list.innerHTML = '';
-//     productFilter.forEach(item => {
-//         let newItem = document.createElement('div');
-//         newItem.classList.add('item');
+let productFilter = listProducts;
+showProduct(productFilter);
+function showProduct(productFilter){
+    count.innerText = productFilter.length;
+    list.innerHTML = '';
+    productFilter.forEach(item => {
+        let newItem = document.createElement('div');
+        newItem.classList.add('item');
 
-//         // create image
-//         let newImage = new Image();
-//         newImage.src = item.image;
-//         newItem.appendChild(newImage);
-//         // create name product
-//         let newTitle = document.createElement('div');
-//         newTitle.classList.add('title');
-//         newTitle.innerText = item.name;
-//         newItem.appendChild(newTitle);
-//         // create price
-//         let newPrice = document.createElement('div');
-//         newPrice.classList.add('price');
-//         newPrice.innerText = item.price.toLocaleString() + ' đ';
-//         newItem.appendChild(newPrice);
+        // create image
+        let newImage = new Image();
+        newImage.src = item.image;
+        newItem.appendChild(newImage);
+        // create name product
+        let newTitle = document.createElement('div');
+        newTitle.classList.add('title');
+        newTitle.innerText = item.name;
+        newItem.appendChild(newTitle);
+        // create price
+        let newPrice = document.createElement('div');
+        newPrice.classList.add('price');
+        newPrice.innerText = item.price.toLocaleString() + ' đ';
+        newItem.appendChild(newPrice);
 
-//         list.appendChild(newItem);
-//     });
-// }
+        list.appendChild(newItem);
+    });
+}
 // filter.addEventListener('submit', function(event){
 //     event.preventDefault();
 //     let valueFilter = event.target.elements;
