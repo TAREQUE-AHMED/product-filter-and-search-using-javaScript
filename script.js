@@ -103,43 +103,43 @@ function showProduct(productFilter){
         list.appendChild(newItem);
     });
 }
-// filter.addEventListener('submit', function(event){
-//     event.preventDefault();
-//     let valueFilter = event.target.elements;
-//     productFilter = listProducts.filter(item => {
-//         // check category
-//         if(valueFilter.category.value != ''){
-//             if(item.nature.type != valueFilter.category.value){
-//                 return false;
-//             }
-//         }
-//         // check color
-//         if(valueFilter.color.value != ''){
-//             if(!item.nature.color.includes(valueFilter.color.value)){
-//                 return false;
-//             }
-//         }
-//         // check name
-//         if(valueFilter.name.value != ''){
-//             if(!item.name.includes(valueFilter.name.value)){
-//                 return false;
-//             }
-//         }
-//         // check min price
-//         if(valueFilter.minPrice.value != ''){
-//             if(item.price < valueFilter.minPrice.value){
-//                 return false;
-//             }
-//         }
-//         //  check max price
-//         if(valueFilter.maxPrice.value != ''){
-//             if(item.price > valueFilter.maxPrice.value){
-//                 return false;
-//             }
-//         }
+filter.addEventListener('submit', function(event){
+    event.preventDefault();
+    let valueFilter = event.target.elements;
+    productFilter = listProducts.filter(item => {
+        // check category
+        if(valueFilter.category.value != ''){
+            if(item.nature.type != valueFilter.category.value){
+                return false;
+            }
+        }
+        // check color
+        if(valueFilter.color.value != ''){
+            if(!item.nature.color.includes(valueFilter.color.value)){
+                return false;
+            }
+        }
+        // check name
+        if(valueFilter.name.value != ''){
+            if(!item.name.includes(valueFilter.name.value)){
+                return false;
+            }
+        }
+        // check min price
+        if(valueFilter.minPrice.value != ''){
+            if(item.price < valueFilter.minPrice.value){
+                return false;
+            }
+        }
+        //  check max price
+        if(valueFilter.maxPrice.value != ''){
+            if(item.price > valueFilter.maxPrice.value){
+                return false;
+            }
+        }
 
 
-//         return true;
-//     })
-//     showProduct(productFilter);
-// })
+        return true;
+    })
+    showProduct(productFilter);
+})
